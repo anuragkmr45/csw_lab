@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body id="btn">
+    <div id="box" style="height: 150px; width: 150px; background-color: salmon">
+        Box
+    </div>
+
+    <!-- <button id="btn">Hide Box after delay</button> -->
+
+    <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('mouseover', () => {
+            setTimeout(() => {
+                const box = document.getElementById('box');
+
+                // 👇️ removes element from DOM
+                box.style.display = 'none';
+
+                // 👇️ hides element (still takes up space on page)
+                // box.style.visibility = 'hidden';
+            }, 1000);
+        });
+
+    </script>
+</body>
+
+</html>
