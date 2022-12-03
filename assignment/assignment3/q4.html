@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <style>
+        #popup{
+            width: 20rem;
+            margin: auto;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" style="display: none;">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur architecto voluptatibus repellat ad delectus ullam esse quam temporibus repellendus aliquid omnis quasi nemo mollitia, amet illo. Vero, fugit possimus.
+        </div>
+
+        <div style="text-align: center;">
+            <button id="closePopup" onclick="closePopup()">close</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="alert()" id="popbtn">click</button>
+    </div>
+
+    <script>
+        function alert(){
+            let popup = document.getElementById('popup');
+            popup.style.display="block";
+
+            let popbtn = document.getElementById('popbtn');
+            popbtn.style.display = "none"
+        }
+
+        function closePopup(){
+            let popup = document.getElementById('popup');
+            popup.style.display="none";
+
+            let popbtn = document.getElementById('popbtn');
+            popbtn.style.display = "block"
+        }
+    </script>
+</body>
+</html>
