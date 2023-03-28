@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5 A3</title>
+</head>
+
+<body>
+
+
+    <p>This is a paragraph.</p>
+    <div id="div1">Lorem ipsum dolor sit amet crem eius perferendis veritatis necessitatibus, nulla </div>
+
+    <button class="btn1">Slide up</button>
+    <button class="btn2">Fade in</button>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $("p").slideUp();
+            });
+        });
+
+        $(document).ready(function () {
+            $(".btn2").click(function () {
+                $("#div1").fadeIn();
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

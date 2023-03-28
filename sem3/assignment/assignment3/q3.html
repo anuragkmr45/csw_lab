@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+
+<body>
+    <form>
+        <input id="field1" type="text" value="Field 1">
+        <input id="field2" type="text" value="Field 2">
+    </form>
+    <p>Write something in the input Field 1, and then click outside the field to check lose focus.</p>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#field1").blur(function () {
+                alert("Lose focus from Field1");
+            });
+        })
+    </script>
+
+</body>
+
+</html>

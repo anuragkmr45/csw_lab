@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question 5 (updated)</title>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #171717;
+            overflow-x: hidden;
+            transition-duration: 0.5s;
+            padding-top: 5rem;
+        }
+
+        .sidenav a {
+            padding: 1rem;
+            text-decoration: none;
+            font-size: 25px;
+            color: rgb(124, 124, 124);
+            display: block;
+            transition-duration: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: white;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services 1</a>
+        <a href="#">Services 2</a>
+        <a href="#">Services 3</a>
+        <a href="#">Services 4</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navbar </span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>
