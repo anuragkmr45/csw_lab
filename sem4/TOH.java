@@ -1,13 +1,27 @@
+package sem4;
+
 public class TOH {
-    static void toh(int n, String src, String helper, String dest) {
-        if (n == 1) {
-            System.out.println(n + "plate transfer form " + src + " to " + dest);
+    public static void display() {
+
+    }
+
+    static int count = 0;
+
+    static void toh(int n, char form_rod, char ta_rod, char aux_rod) {
+        if (n == 0) {
             return;
         }
+        toh(n - 1, form_rod, aux_rod, ta_rod);
+        // System.out.println("move disk " + n + " from rod " + form_rod + " to rod " +
+        // ta_rod);
+        count++;
+        toh(n - 1, form_rod, aux_rod, ta_rod);
+    }
 
-        toh(n - 1, src, dest, helper);
-        System.out.println(n - 1 + " plates transfer form " + src + " to " + helper);
-
-        toh(n - 1, helper, src, dest);
+    public static void main(String[] args) {
+        for (int N = 1; N < 10; N++) {
+            toh(N, 'A', 'S', 'B');
+            System.out.println("for n=" + N + " Steps = " + count);
+        }
     }
 }
