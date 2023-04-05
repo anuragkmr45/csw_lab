@@ -49,6 +49,16 @@ public class SortedArrToBST {
         inOrder(node.right);
     }
 	
+	void postOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        inOrder(node.left);
+        inOrder(node.right);
+        System.out.print(node.data + "  ");
+    }
+	
 	public static void main(String[] args) {
 		SortedArrToBST tree = new SortedArrToBST();
 		int arr[] = {1, 2, 3, 4, 5, 6};
